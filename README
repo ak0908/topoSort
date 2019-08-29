@@ -58,4 +58,4 @@ wouldn't compute SCC since they are stored in my G->SCCList[i] and G->numSCC.  I
 This command will output all ther result to the output file
 
 
-<make clean> command will remove unnecessary files in PA 2 folder
+<make clean> command will remove unnecessary files in this folder

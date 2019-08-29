@@ -1,0 +1,61 @@
+
+
+### CONTENT
+
+
+1)List.c 
+This is the Implementation file for Linked List ADT. 
+
+2)List.h
+This is the header file for Linked List ADT.
+
+3)Digraph.c
+This is the implementation file for Digraph ADT. There are 3 main function in my Digraph ADT.
+
+4)Digraph.h
+This is the header file for Digraph ADT
+
+5)DigraphProperties.c	
+This is a test file for Digraph ADT
+
+6)Makefile
+This is the Makefile for PA 4 assignment.
+
+
+### Data Structure
+
+In my DigraphObj struct besides the ones provided to me (numVertices, numEdges and the array of Lists of outgoing neighbors) These following filed also included:
+	int* arrayInt;        
+	int* arrayTime;      
+	int* arrayFinishTime;  
+	int* arrayDistance;    
+	int* arrayIndegree;    
+
+!!! Special data fileds used in this PA4 to make SCC more efficient:
+   bool cleanGraph;   // A graph would be considered CLEAN if there isn't 
+   					  // any modification since last SCC function call.
+
+   int numSCC;        // this is my number of SCC components
+
+   List* SSCList;     // This List array would store the SSC Componets as 
+   					  // Lists. It will get recalcualted if the Graph 
+   		              // isn't clean.
+
+!!! WHY my SSC Algorithm is efficient:
+Everytime my PA4 encounters a SSC question, my PA4 first check if the this Digarph has changed by using G->cleanGraph. If not, my program
+wouldn't compute SCC since they are stored in my G->SCCList[i] and G->numSCC.  If yes, then compute SCC.
+
+
+
+
+
+### USAGE
+
+<make >              makes DigraphProperties executable
+
+
+./DigraphProperties <input> <output>
+This command will output all ther result to the output file
+
+
+<make clean> command will remove unnecessary files in PA 2 folder
